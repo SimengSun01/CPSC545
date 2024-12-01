@@ -1,0 +1,52 @@
+2024-11-30 18:43:53	-	ecstatic_jepsen	-	8698781fa402bf6b11156702c00990e6	1c307bf2-4d90-4c0b-903e-43274a48ad8e	nextflow main.nf
+2024-11-30 18:45:26	-	sick_jepsen	-	3302fa8156f29b9c77d5c602509137aa	51dc33ef-c6c5-452f-93f2-1cd196a20c9f	nextflow run main.nf
+2024-11-30 18:46:17	-	hungry_saha	-	8759b12e20357ae35dabae1f79a45f60	427209cb-3c2f-4c8e-80e1-a119add2595b	nextflow run main.nf
+2024-11-30 18:49:58	-	romantic_wing	-	a2aedf7175d5d885d835c5c3caf5ec3f	81a18026-9a95-4389-b4e2-38c5037e476e	nextflow run main.nf
+2024-11-30 18:51:45	-	special_mestorf	-	b62813bfe90ade5455010f14a3d89873	11d16c1e-6154-4994-acd2-7b3dc1a548a2	nextflow run main.nf
+2024-11-30 18:52:38	-	disturbed_bohr	-	4dfe174b92711b34c2c6164fa66f1960	95c64169-45fb-4f8e-8b38-756b9bb1c28f	nextflow run main.nf
+2024-11-30 18:54:00	-	confident_kimura	-	4dfe174b92711b34c2c6164fa66f1960	1d6871bb-f3a1-43b5-b72d-875f393de65c	nextflow run main.nf -with-conda
+2024-11-30 18:55:26	-	tender_poincare	-	79366c6449a2199d8ee50890b94bd01c	689a4146-8ae2-4ad3-88f9-af134ba61b72	nextflow run main.nf
+2024-11-30 18:58:31	-	backstabbing_neumann	-	7a49a59332989b0207bdb4bdd7a1f1cb	67a3f67f-ab5e-4ee5-bc42-1ccd31e7f6d3	nextflow run main.nf
+2024-11-30 19:02:19	-	drunk_murdock	-	dff1ac3d9f101326a7d0cb4e0524a22c	ce893857-bc1a-4004-890b-94ae5a442910	nextflow run main.nf
+2024-11-30 19:04:09	-	nice_kalam	-	dff1ac3d9f101326a7d0cb4e0524a22c	74f3bfe9-65aa-4a69-af93-bb97cb068df2	nextflow run main.nf
+2024-11-30 19:29:13	-	mighty_swirles	-	b9c60528ea5dbfc158327dc033f06738	ec85cae2-b9db-4b3f-85f7-0a63e17107be	nextflow run main.nf
+2024-11-30 19:30:26	-	stupefied_noether	-	d0c3a2394e3e881bc420389d344c4201	04bea95d-336a-4a35-9c16-ce443fb644f1	nextflow run main.nf
+2024-11-30 19:31:58	-	reverent_cray	-	42cdc361ffec0a24151365c3b9545463	3ec109d8-0466-433f-ba66-ef21ef0d9455	nextflow run main.nf
+2024-11-30 19:37:14	-	small_leakey	-	3c39adb7625277001d802d5dfaa59ad5	d5950619-7bc6-42a4-8f4b-cf144fb9ca2b	nextflow run main.nf
+2024-11-30 19:38:20	-	ecstatic_kowalevski	-	7d6a1fd761cfdb805e1f4290103857df	6e1b259b-1fb2-434e-9365-bf300030fbb8	nextflow run main.nf
+2024-11-30 19:40:38	-	jovial_mcnulty	-	30136c037bf57a932351290f6fffe050	948cbdbc-2e11-45b5-a53a-ed0cbfe3e157	nextflow run main.nf
+2024-11-30 19:45:08	-	serene_lalande	-	5fa6b221818c0c5f8bc19ae1d4429419	df3f6c11-89cf-41f9-b6c0-59046628ee71	nextflow run main.nf -with-conda
+2024-11-30 19:46:51	-	suspicious_stallman	-	84aaf03bf66d72a3f914a22d43e2a21c	7246ca67-1611-4309-bc4b-79ffe35c3e13	nextflow run main.nf -with-conda
+2024-11-30 19:48:24	-	deadly_boltzmann	-	d52fd5045ad879158dbfc0d2ad408be7	ab6a7303-2d78-492c-a20d-b56f0563094b	nextflow run main.nf
+2024-11-30 19:49:59	-	stoic_lavoisier	-	c6b2da750f962f594577032ca21512af	d697db28-716a-42ad-9d40-7a58cefbf7b0	nextflow run main.nf
+2024-11-30 19:53:09	-	agitated_ramanujan	-	f35b18de4e7d1b244a3f0a1a56ae8a10	d3a740cd-6b3e-40a8-8842-037abf6a5feb	nextflow run main.nf
+2024-11-30 19:55:18	-	wise_mandelbrot	-	4d7b3c050f44d17336d00625b7176dff	09aa1cac-614c-4776-876f-461267973e4d	nextflow run main.nf
+2024-11-30 19:56:22	-	lethal_mercator	-	0c03472091ae3b505d2238e60e1ea3c8	2d7c8cbd-9a75-4b9b-8bed-17e0e3ed8243	nextflow run main.nf
+2024-11-30 19:58:41	-	boring_babbage	-	9122d04cc11747f2d5ead2d06d452a9e	4d1669d2-17a2-4429-9322-4b102c4cbea9	nextflow run main.nf
+2024-11-30 20:04:24	2.2s	trusting_lamarck	ERR	a160c10f919b45c10d79f821a0baabd4	af40b0de-cd5c-4ec4-9974-a881ac68457c	nextflow run test.nf
+2024-11-30 20:08:26	-	hopeful_torvalds	-	36632517b19c34dd22e24f579cd436f5	400498f8-ad76-49c2-9267-f595c3fd2e78	nextflow run test.nf
+2024-11-30 20:11:24	-	kickass_jones	-	9122d04cc11747f2d5ead2d06d452a9e	e3823245-ff04-41b0-8dae-e761adfb8514	nextflow run main.nf
+2024-11-30 20:12:34	-	nostalgic_blackwell	-	9eaa26d13fcdd0d81656990a3ece47c1	4ee79147-65ab-42b6-9eb4-2632dd718eb8	nextflow run main.nf
+2024-11-30 20:13:34	-	shrivelled_coulomb	-	36632517b19c34dd22e24f579cd436f5	1b23ba2f-985b-4c34-a08d-6d6adc7a0107	nextflow run test.nf
+2024-11-30 20:14:50	1m 7s	berserk_spence	OK	fc5a3158623e4d28b84c368a27ddbd1f	cef4354b-61de-49e6-8943-380d7b1d4a86	nextflow run test.nf
+2024-11-30 20:17:32	-	admiring_becquerel	-	7ce1f2204917d939e87c2ba3778557d7	1dc7a882-14d7-4377-971f-78f6abe2df11	nextflow run test.nf
+2024-11-30 20:20:08	-	high_celsius	-	aa8f3cd7bcba7f4b10b52f1e0fd55ed5	0f944419-f5c5-44a6-8eaf-dbeddb7321d4	nextflow run test.nf
+2024-11-30 20:20:27	-	chaotic_dalembert	-	12fc62cff97745d117a320bdb3ff400f	f7c30158-6c36-41de-95d3-f6071049f3e1	nextflow run test.nf
+2024-11-30 20:24:26	-	boring_wilson	-	bc8a9f0c9eb87b7bdbae5e635b42b6e4	9bb452ca-20c6-4ce7-9a4c-16a9bd5e7189	nextflow run test.nf
+2024-11-30 20:25:41	-	adoring_bhabha	-	06383615e8a87af4941d6f0f106e2bfc	f4e3067f-69df-4da2-9fe6-366af5fbfcd5	nextflow run test.nf
+2024-11-30 20:27:19	-	agitated_bernard	-	fc73045bc29949b096a1d775e07b7f77	d6cf80ce-5ce3-47b8-91e8-60a007304d72	nextflow run test.nf
+2024-11-30 20:28:53	-	maniac_curran	-	2512011ab2b12e8dae7b06bcbf18c0a9	f790dc5a-a297-4d56-a3e8-8514d6eea322	nextflow run test.nf
+2024-11-30 20:30:45	14.4s	spontaneous_mirzakhani	ERR	20c43a0aa5fe40ed9722849da9e08686	f60760d4-2351-45ab-b873-f4d0e3add826	nextflow run test.nf
+2024-11-30 20:33:10	28s	magical_elion	OK	d23c925a9a4e44cd876dd003ff26011b	03b35fbe-c79c-4683-b830-961bf80eea51	nextflow run test.nf
+2024-11-30 20:38:27	-	angry_lavoisier	-	618028f4c7a2617401f3709acef444c4	11e3ad5e-c734-4fb0-b75f-dfba107e22d7	nextflow run test.nf
+2024-11-30 20:41:59	-	ecstatic_meninsky	-	9494054132e541ad9ff9bbd90628ed40	5af9836c-ccb0-4c61-a437-b29787884edd	nextflow run test.nf
+2024-11-30 20:42:49	39.6s	stupefied_faggin	OK	b05edcfa108fb785517c1b267ffa8cf1	c7537ba5-e6f7-4dc8-830c-40c5613f30dd	nextflow run test.nf
+2024-11-30 20:47:31	-	agitated_brazil	-	7d654bbc9d16d1bb0102bc04d76bfa4a	5bb407e4-7d73-4285-9a5a-b62c07559ead	nextflow run test.nf
+2024-11-30 20:49:04	41.7s	happy_hamilton	OK	a8278a59bff62970df0222d7ae46530b	c4bf10d8-5337-4eac-b7e2-24da33e9fa57	nextflow run test.nf
+2024-11-30 20:52:13	-	infallible_darwin	-	8163baf375b435c6cea97036765674d5	a01d4106-e003-4dcc-984a-bc18ff559bee	nextflow run test.nf
+2024-11-30 20:57:35	-	dreamy_brown	-	3463772b9afb2f3c889c7bf2906c4814	e00b6a83-2fbb-41a1-a7dc-cff8b928574c	nextflow run test.nf
+2024-11-30 20:59:21	30.9s	festering_monod	ERR	a67dd0712da180a5cb9a1ee005287d92	6355c0a0-e503-4fb6-b6e2-4f01638ea842	nextflow run test.nf
+2024-11-30 21:02:00	32s	irreverent_picasso	OK	fc387a19600b8cb1781c35940ec2ad93	90f2f6b7-d5b7-45c6-9a0e-68d7ed547363	nextflow run test.nf
+2024-11-30 21:50:56	1.9s	gloomy_lichterman	ERR	0b5fb74c494f24dfdd37d1493163f695	e21b9c3d-ab41-4e19-b64e-4d18539b77f9	nextflow run test.nf
+2024-11-30 21:56:14	2.1s	loquacious_hugle	ERR	0b5fb74c494f24dfdd37d1493163f695	14905f89-e6d1-401e-a80b-d14a85504762	nextflow test.nf
+2024-11-30 21:57:12	32.7s	distraught_venter	OK	ec0da2aa4d025ab4d3d4d7250efc5b84	7ad4f755-616f-47a9-8026-91f82a12f7b7	nextflow test.nf
