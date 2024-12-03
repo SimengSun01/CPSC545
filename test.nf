@@ -7,34 +7,36 @@ params.preprocess_script = "${projectDir}/scripts/preprocess_data.py"
 params.split_script = "${projectDir}/scripts/split_dataset.py"
 params.rf_script = "${projectDir}/scripts/random_forest_prediction.py"
 params.visualize_script = "${projectDir}/scripts/visualize_confusion_matrix.py"
-params.output_dir = "${projectDir}/output"
+params.output_dir = "./output"
 params.seed = 42
 
 /*
  * Main workflow definition
  */
 workflow {
-    // 
+    // Channels for input data and scripts
     input_csv_ch = Channel.fromPath(params.input_csv)
     preprocess_script_ch = Channel.fromPath(params.preprocess_script)
+    split_script_ch = Channel.fromPath(params.split_script)
+    rf_script_ch = Channel.fromPath(params.rf_script)
+    visualize_script_ch = Channel.fromPath(params.visualize_script)
+
+    // Step 1: Preprocess data
     preprocessed_data_ch = preprocessData(input_csv_ch, preprocess_script_ch)
 
-    // 
-    split_script_ch = Channel.fromPath(params.split_script)
+    // Step 2: Split dataset
     split_output = splitDataset(preprocessed_data_ch, split_script_ch)
 
-    // step 3
-    rf_script_ch = Channel.fromPath(params.rf_script)
+    // Step 3: Random Forest prediction
     rf_results = randomForestPrediction(split_output, rf_script_ch)
 
-    // 
+    // Step 4: Visualize confusion matrix
     confusion_matrix_ch = rf_results.map { it[1] } // Extract confusion_matrix.npy
-    visualize_script_ch = Channel.fromPath(params.visualize_script)
     visualizeConfusionMatrix(confusion_matrix_ch, visualize_script_ch)
 }
 
 /*
- * Preprocess 
+ * Process: Preprocess Data
  */
 process preprocessData {
 
@@ -45,17 +47,18 @@ process preprocessData {
     output:
     path "preprocessed_data.csv"
 
-    conda 'rf_nf.yml'
+    container 'selinasun01/phaseprediction:latest'
 
     script:
     """
+    mkdir -p ${params.output_dir}
     python ${script_file} --input ${input_csv} --output preprocessed_data.csv
     cp preprocessed_data.csv ${params.output_dir}/preprocessed_data.csv
     """
 }
 
 /*
- * train, validation, and test sets
+ * Process: Split Dataset
  */
 process splitDataset {
 
@@ -66,18 +69,20 @@ process splitDataset {
     output:
     tuple path("train.csv"), path("valid.csv"), path("test.csv")
 
-    conda 'rf_nf.yml'
+    container 'selinasun01/phaseprediction:latest'
 
     script:
     """
+    mkdir -p ${params.output_dir}
     python ${script_file} --input ${preprocessed_file} --output_dir . --seed ${params.seed}
     cp train.csv ${params.output_dir}/train.csv
     cp valid.csv ${params.output_dir}/valid.csv
     cp test.csv ${params.output_dir}/test.csv
     """
 }
+
 /*
- * random forest prediction
+ * Process: Random Forest Prediction
  */
 process randomForestPrediction {
 
@@ -88,7 +93,7 @@ process randomForestPrediction {
     output:
     tuple path("results/metrics.txt"), path("results/confusion_matrix.npy")
 
-    conda 'rf_nf.yml'
+    container 'selinasun01/phaseprediction:latest'
 
     script:
     """
@@ -106,9 +111,8 @@ process randomForestPrediction {
     """
 }
 
-
 /*
- *confusion matrix
+ * Process: Visualize Confusion Matrix
  */
 process visualizeConfusionMatrix {
 
@@ -117,9 +121,9 @@ process visualizeConfusionMatrix {
     path script_file
 
     output:
-    path "results/confusion_matrix_label_*.png"
+    path "${params.output_dir}/results/confusion_matrix_label_*.png"
 
-    conda 'rf_nf.yml'
+    container 'selinasun01/phaseprediction:latest'
 
     script:
     """
@@ -127,8 +131,11 @@ process visualizeConfusionMatrix {
     python ${script_file} \
         --input ${confusion_matrix} \
         --output results/confusion_matrix.png
+
+    mkdir -p ${params.output_dir}/results
     cp results/confusion_matrix_label_*.png ${params.output_dir}/results/
     """
 }
+
 
 
