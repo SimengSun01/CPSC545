@@ -121,7 +121,7 @@ process visualizeConfusionMatrix {
     path script_file
 
     output:
-    path "${params.output_dir}/results/confusion_matrix_label_*.png"
+    path "results/confusion_matrix_label_*.png"
 
     container 'selinasun01/phaseprediction:latest'
 
@@ -132,10 +132,12 @@ process visualizeConfusionMatrix {
         --input ${confusion_matrix} \
         --output results/confusion_matrix.png
 
+    # Copy outputs to the desired output directory
     mkdir -p ${params.output_dir}/results
     cp results/confusion_matrix_label_*.png ${params.output_dir}/results/
     """
 }
+
 
 
 
