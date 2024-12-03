@@ -7,7 +7,7 @@ params.preprocess_script = "${projectDir}/scripts/preprocess_data.py"
 params.split_script = "${projectDir}/scripts/split_dataset.py"
 params.rf_script = "${projectDir}/scripts/random_forest_prediction.py"
 params.visualize_script = "${projectDir}/scripts/visualize_confusion_matrix.py"
-params.output_dir = "${projectDir}/output"
+params.output_dir = "$./output"
 params.seed = 42
 
 /*
@@ -49,7 +49,8 @@ process preprocessData {
 
     script:
     """
-    python ${script_file} --input ${input_csv} --output preprocessed_data.csv
+    mkdir -p ${params.output_dir}
+    python3 ${script_file} --input ${input_csv} --output preprocessed_data.csv
     cp preprocessed_data.csv ${params.output_dir}/preprocessed_data.csv
     """
 }
@@ -70,7 +71,7 @@ process splitDataset {
 
     script:
     """
-    python ${script_file} --input ${preprocessed_file} --output_dir . --seed ${params.seed}
+    python3 ${script_file} --input ${preprocessed_file} --output_dir . --seed ${params.seed}
     cp train.csv ${params.output_dir}/train.csv
     cp valid.csv ${params.output_dir}/valid.csv
     cp test.csv ${params.output_dir}/test.csv
@@ -93,7 +94,7 @@ process randomForestPrediction {
     script:
     """
     mkdir -p results
-    python ${script_file} \
+    python3 ${script_file} \
         --train ${train_file} \
         --valid ${valid_file} \
         --test ${test_file} \
@@ -124,10 +125,11 @@ process visualizeConfusionMatrix {
     script:
     """
     mkdir -p results
-    python ${script_file} \
+    python3 ${script_file} \
         --input ${confusion_matrix} \
         --output results/confusion_matrix.png
     cp results/confusion_matrix_label_*.png ${params.output_dir}/results/
     """
 }
+
 
